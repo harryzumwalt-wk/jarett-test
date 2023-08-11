@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Paragraph from './components/paragraph'
+import Form from './components/form'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Paragraph name={"harry"} age={27}/><br />
+      <Paragraph name={"jarett"} age={23}/><br />
+      <Paragraph name={"sonia"} age={80}/>
+      <Form />
     </div>
   );
 }
 
-export default App;
+export default App
+
+
+// components have 2 main features
+// - Props
+// - State
