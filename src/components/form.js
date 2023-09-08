@@ -1,31 +1,32 @@
 import { useState } from "react";
+import Paragraph from "./paragraph";
 
 function Form() {
-    const [inputOne, setInputOne] = useState('')
-    const [inputTwo, setInputTwo] = useState('')
+    const [name, setName] = useState('harry') // [variable, updaterFunction]
+    const [age, setAge] = useState('')
 
-    function handleChangeOne(event) {
-        setInputOne(event.target.value)
+    function handleChangeName(event) {
+        setName(event.target.value)
     }
 
-    function handleChangeTwo(event) {
-        setInputTwo(event.target.value)
+    function handleChangeAge(event) {
+        setAge(event.target.value)
     }
 
     function handleClick() {
-        console.log("You have submitted a from. These are the values submitted: ");
-        console.log("Name: ", inputOne)
-        console.log("Age: ", inputTwo)
+        console.log("You have submitted a form. These are the values submitted: ");
+        console.log("Name: ", name)
+        console.log("Age: ", age)
     }
 
     return (
         <div>
-            <p>input one: {inputOne}</p>
-            <p>input two: {inputTwo}</p>
+            <p>Name: {name}</p>
+            <p>Age: {age}</p>
             <label>Name</label>
-            <input type="text" onChange={handleChangeOne} /><br />
+            <input type="text" onChange={handleChangeName} /><br />
             <label>Age</label>
-            <input type="text" onChange={handleChangeTwo} /><br />
+            <input type="text" onChange={handleChangeAge} /><br />
             <input type="submit" onClick={handleClick} />
         </div>
     )
